@@ -89,10 +89,3 @@ The CICD pipeline automates the following steps:
 
 ### Step 4: Add Deploy Stage
 ![App Screenshot](https://drive.google.com/uc?id=11kMurywkjcduXiScZqg002iR8n6Xi7eR)
-
-### Step 5: Review
-![App Screenshot](https://drive.google.com/uc?id=1pEGgpCx0t3HB5v0CJevE_ZXQAeT5av3n)
-
-![App Screenshot](https://drive.google.com/uc?id=1ES0Q4ZpOUcBW0zxhra97oT00bthJhIuK)
-
-![App Screenshot](https://drive.google.com/uc?id=1oaUm5NI-s6JpMg-jIxRnuIgaPALAR7vv)
