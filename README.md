@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# Kaiburr Task 5: CI-CD Pipeline for Angular Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository demonstrates the setup and configuration of a Continuous Integration and Continuous Deployment (CICD) pipeline for a React application deployed to an AWS S3 bucket.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Project Structure](#project-structure)
+- [Key Features](#key-features)
+- [Technologies Used](#technologies-used)
+- [Requirements](#requirements)
+- [How the Task Is Made](#how-the-task-is-made)
+- [Screenshots](#screenshots)
 
-### `npm start`
+## Project Structure
+The project is structured as follows:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `build/`: The output folder containing the React application files.
+- `codebuild/`: AWS CodeBuild configuration file.
+  - `.codebuild.yaml`
+- `README.md`: This README file.
+   
+## Key Features
+- Automates the build and deployment of an React application to an S3 bucket.
+- Uses AWS CodePipeline for setting up a CICD pipeline.
+- Demonstrates integration with AWS CodeBuild for building the React app.
+- Enables a static website hosted on an S3 bucket.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
+- React: Frontend framework
+- AWS S3: Object storage service for hosting the website
+- AWS CodePipeline: CICD service for automating the deployment process
+- AWS CodeBuild: Service for building the React application
+- Git: Version control system
+- Node.js: JavaScript runtime for React development
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+Before setting up the CICD pipeline, ensure you have the following:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- An AWS account with appropriate permissions.
+- The React application codebase.
+- AWS CLI configured with the necessary credentials.
+- Git installed on your local machine.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How the Task Is Made
 
-### `npm run eject`
+Follow the AWS documentation and the screenshots provided in the "Screenshots" section to set up the CICD pipeline.
+The CICD pipeline automates the following steps:
+- Creates an S3 bucket to host the React application.
+- Builds the React application using npm run build.
+- Uploads the application files to the S3 bucket.
+- Configures the bucket for static website hosting.
+- Sets up an AWS CodePipeline with source, build, and deploy stages.
+    
+## Screenshots
+### Here are some screenshots that illustrate the workflow of setting up the CICD pipeline:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Creating an S3 Bucket
+![App Screenshot](https://drive.google.com/uc?id=15s1-Idv4xzsA4GwCllDYfmJ3aecEta69)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Uploading dist App Files to S3
+![App Screenshot](https://drive.google.com/uc?id=1tazJ02QSovHlZmAE0BVQabFdlgeEdvBt)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![App Screenshot](https://drive.google.com/uc?id=1pMox7S29EhfHxijq-rdZL2pm4dW_K0Tp)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Configuring Static Website Hosting through Bucket Policy
+![App Screenshot](https://drive.google.com/uc?id=1wundXgkCWt1CGPQCk2gQMn75bndlARE3)
 
-## Learn More
+![App Screenshot](https://drive.google.com/uc?id=1Vle99B9aegeLvdIFvTkDwXl78MjeIT3T)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Acceesing the frontend through Bucket Website Endpoint
+![App Screenshot](https://drive.google.com/uc?id=1tykwlds0S-CPtdRYu2Y9FAn22ZpYqUg7)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### AWS CodePipeline Stages
+![App Screenshot](https://drive.google.com/uc?id=1bygGgV34nQQorsthpsdKWIUiwdbklmET)
 
-### Code Splitting
+### Step 1: Choose Pipeline settings
+![App Screenshot](https://drive.google.com/uc?id=1cSG_DPYvSshxNB2N2Lv1ICTcakjg5ezr)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Step 2: Add Source stage
+![App Screenshot](https://drive.google.com/uc?id=1hKWtAFiMY4BlLnyJA8nYUAOwyT27YvMp)
 
-### Analyzing the Bundle Size
+### Step 3: Add Build Stage
+![App Screenshot](https://drive.google.com/uc?id=1C272AGPNb7pnOQXKiOrQyxe_eN5UPTRU)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![App Screenshot](https://drive.google.com/uc?id=1_a_g19Knrb4WCRv5G-oagJUMzintLTBr)
 
-### Making a Progressive Web App
+### Step 4: Add Deploy Stage
+![App Screenshot](https://drive.google.com/uc?id=11kMurywkjcduXiScZqg002iR8n6Xi7eR)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Step 5: Review
+![App Screenshot](https://drive.google.com/uc?id=1pEGgpCx0t3HB5v0CJevE_ZXQAeT5av3n)
 
-### Advanced Configuration
+![App Screenshot](https://drive.google.com/uc?id=1ES0Q4ZpOUcBW0zxhra97oT00bthJhIuK)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![App Screenshot](https://drive.google.com/uc?id=1oaUm5NI-s6JpMg-jIxRnuIgaPALAR7vv)
